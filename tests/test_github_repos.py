@@ -275,7 +275,7 @@ class TestGithubRepos(TestCase):
         self.assertEqual(response.status_code, 200, "Github /repos unsuccessfully fetched response")
 
         # only have 5 repos to test with
-        self.assertEqual(len(response.json()), 5, "Github /repos did not return the correct number of repos")
+        self.assertEqual(len(response.json()), 6, "Github /repos did not return the correct number of repos")
 
     @skip("Need user with a lot of repos and for per_page to work")
     def test_github_repos_page_5(self):
